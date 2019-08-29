@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-
 const Container = (props) => (
   <div style={{ flex: 1, display: 'flex', flexWrap: 'wrap' }}>
     <div style={{ flex: 2, fontSize: 20 }}>{ props.label }</div>

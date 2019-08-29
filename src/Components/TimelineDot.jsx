@@ -7,7 +7,7 @@ import Radium from 'radium';
  */
 const dots = {
   /**
-   * The style information for the clickable dates that apper floating over the timeline
+   * The style information for the clickable dates that appear floating over the timeline
    */
   links: {
     position: 'absolute',
@@ -16,7 +16,7 @@ const dots = {
     paddingBottom: 15,
   },
   /**
-   * The base style information for the event dot that appers exactly on the timeline
+   * The base style information for the event dot that appears exactly on the timeline
    */
   base: {
     position: 'absolute',
@@ -77,7 +77,7 @@ class TimelineDot extends React.Component {
         ? hoverStyle
         : undefined,
     ]
-  }
+  };
 
   render() {
     let dotType = 'future';

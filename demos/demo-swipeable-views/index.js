@@ -9,34 +9,36 @@ import GameInfo from '../resources/content';
 import '../../node_modules/bootstrap/dist/css/bootstrap.min.css';
 
 class App extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { value: 0, previous: 0 };
-  }
+    constructor(props) {
+        super(props);
+        this.state = { value: 0, previous: 0 };
+    }
 
-  componentWillMount() {
-    this.data = GameInfo.map((game, index) => {
-      return ({
-        date: game.date,
-        component: (
-          <div className='container' key={index}>
-            <h1>{ `The Elder Scrolls ${index + 1}:`}</h1>
-            <h2>{ game.subtitle }</h2>
-            <hr />
-            <p>{ game.content}</p>
-            <hr />
-          </div>
-        )
-      });
-    });
-  }
+    componentWillMount() {
+        this.data = GameInfo.map((game, index) => {
+            return ({
+                date: game.date,
+                title: game.title,
+                component: (
+                    <div className='container' key={ index }>
+                        <h1>{ `The Elder Scrolls ${ index + 1 }:` }</h1>
+                        <h2>{ game.subtitle }</h2>
+                        <hr/>
+                        <p>{ game.content }</p>
+                        <hr/>
+                    </div>
+                )
+            })
+                ;
+        });
+    }
 
-  render() {
-    return (
-      <HorizontalTimelineContent
-        content={this.data} />
-    );
-  }
+    render() {
+        return (
+            <HorizontalTimelineContent
+                content={ this.data }/>
+        );
+    }
 }
 
-ReactDOM.render(<App />, document.getElementById('content'));
+ReactDOM.render(<App/>, document.getElementById('content'));

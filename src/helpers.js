@@ -5,11 +5,11 @@
 
 
 /**
- * Differance between two dates
+ * Difference between two dates
  *
  * @param  {Date} first Date of the first event
  * @param  {Date} second Date of the second event
- * @return {number} Differance between the two dates
+ * @return {number} Difference between the two dates
  */
 export const daydiff = (first, second) => Math.round((second - first));
 
@@ -61,7 +61,7 @@ export const cummulativeSeperation = (dates, labelWidth, minEventPadding, maxEve
   const distances = new Array(dates.length);
   distances[0] = startPadding;
 
-  // Calculating the minimum seperation between events
+  // Calculating the minimum separation between events
   const dateExtremes = dateDistanceExtremes(dates);
   const datesDiff = dateExtremes.max - dateExtremes.min;
   const paddingDiff = maxEventPadding - minEventPadding;
@@ -70,12 +70,12 @@ export const cummulativeSeperation = (dates, labelWidth, minEventPadding, maxEve
 
   for (let index = 1; index < distances.length; index += 1) {
     const distance = daydiff(dates[index - 1], dates[index]);
-    // relative spacing according to min and max seperation
-    const seperation = datesDiff === 0
+    // relative spacing according to min and max separation
+    const separation = datesDiff === 0
       ? maxEventPadding
       : Math.round((((distance - dateExtremes.min) * paddingDiff) / datesDiff) + minEventPadding);
     // the distance_from_origin(n) = distance_from_origin(n-1) + distance between n and n - 1.
-    distances[index] = distances[index - 1] + labelWidth + seperation;
+    distances[index] = distances[index - 1] + labelWidth + separation;
   }
   return distances;
 };

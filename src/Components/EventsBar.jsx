@@ -255,7 +255,7 @@ EventsBar.propTypes = {
   fillingMotion: PropTypes.object.isRequired,
   barPaddingRight: PropTypes.number.isRequired,
   barPaddingLeft: PropTypes.number.isRequired,
-}
+};
 
 
 export default EventsBar;

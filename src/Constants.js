@@ -3,7 +3,7 @@
  * return {object}
  */
 module.exports = {
-  // Left and right are used to control the direciton in which we want to translate our
+  // Left and right are used to control the direction in which we want to translate our
   // timeline
   LEFT: 'left',
   RIGHT: 'right',
@@ -23,7 +23,7 @@ module.exports = {
   // Maximum padding between two event labels
   MAX_EVENT_PADDING: 120,
   // width of the area for text in the timeline
-  DATE_WIDTH: 85,
+  DATE_WIDTH: 100,
   // Padding at end of timeline
   TIMELINE_PADDING: 100,
 

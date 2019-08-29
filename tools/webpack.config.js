@@ -9,7 +9,7 @@
 const webpack = require('webpack');
 const path = require('path');
 
-// entry point of all the deomos
+// entry point of all the demos
 let entry = {
   'demo-swipeable-views': path.join(process.cwd(), './demos/demo-swipeable-views/index.js')
 };

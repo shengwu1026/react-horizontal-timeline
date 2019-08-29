@@ -17,19 +17,19 @@ const RIGHT = 'right';
  * @return {object} The styleing Information for the left or right fader
  */
 const faderStyle = {
-  base: {
-    top: '50%',
-    position: 'absolute',
-    bottom: 'auto',
-    transform: 'translateY(-50%)',
-    height: '100%',
-    width: 20,
-    overflow: 'hidden',
-  },
-  specific: (styles, position, gradientDirection) => ({
-    [position]: 40,
-    backgroundImage: `linear-gradient(to ${gradientDirection}, ${styles.background}, ${Color(styles.background).alpha(0).rgb()})`
-  })
+    base: {
+        top: '50%',
+        position: 'absolute',
+        bottom: 'auto',
+        transform: 'translateY(-50%)',
+        height: '100%',
+        width: 20,
+        overflow: 'hidden',
+    },
+    specific: (styles, position, gradientDirection) => ({
+        [position]: 40,
+        backgroundImage: `linear-gradient(to ${ gradientDirection }, ${ styles.background }, ${ Color(styles.background).alpha(0).rgb() })`
+    })
 };
 
 
@@ -40,10 +40,10 @@ const faderStyle = {
  * @return {StatelessFunctionalReactComponent} Markup Information for the fader
  */
 const Faders = (props) => (
-  <ul style={{ listStyle: 'none' }}>
-    <li style={[ faderStyle.base, faderStyle.specific(props.styles, LEFT, RIGHT) ]} />
-    <li style={[ faderStyle.base, faderStyle.specific(props.styles, RIGHT, LEFT) ]} />
-  </ul>
+    <ul style={ { listStyle: 'none' } }>
+        <li style={ [faderStyle.base, faderStyle.specific(props.styles, LEFT, RIGHT)] }/>
+        <li style={ [faderStyle.base, faderStyle.specific(props.styles, RIGHT, LEFT)] }/>
+    </ul>
 );
 
 
@@ -52,11 +52,11 @@ const Faders = (props) => (
  * @type {Object}
  */
 Faders.propTypes = {
-  styles: PropTypes.shape({
-    foreground: PropTypes.string.isRequired,
-    background: PropTypes.string.isRequired,
-    outline: PropTypes.string.isRequired
-  })
+    styles: PropTypes.shape({
+        foreground: PropTypes.string.isRequired,
+        background: PropTypes.string.isRequired,
+        outline: PropTypes.string.isRequired
+    })
 };
 
 

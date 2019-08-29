@@ -109,8 +109,7 @@ const HorizontalTimelineButtons = (props) => {
       </li>
     </ul>
   );
-}
-
+};
 
 // Expected propteries
 HorizontalTimelineButtons.propTypes = {
