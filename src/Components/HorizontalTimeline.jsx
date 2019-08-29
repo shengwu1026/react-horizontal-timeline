@@ -16,9 +16,9 @@ import Constants from '../Constants';
  * Default method to convert a date to a string label
  * @param {string} date The string representation of a date
  * @param {string} name The name of an event
- * @return {string} The formatted date string
+ * @return {string} The formatted string
  */
-const defaultGetLabel = (date, name, index) => (name + "\n" +(new Date(date)).toUTCString());
+const defaultGetLabel = (date, name, index) => (name);
 
 /*
  * This is the Horizontal Timeline. This component expects an array of dates
@@ -48,7 +48,6 @@ class HorizontalTimeline extends React.Component {
             props.linePadding,
         );
 
-        console.log(props);
         // Convert the distances and dates to events
         const events = distances.map((distance, index) => ({
             distance,
